@@ -28,3 +28,19 @@ This architecture introduces a new approach to creating React components by divi
 
 - Server Components
 - Client Components
+
+## By default Next.js treats all components as server components.
+
+# Why we should use Server Compoents?
+
+- Data is fetched before rendering, so the user sees content immediately.
+
+- Less client-side JS → smaller bundle → faster load.
+
+- Great for SEO (HTML is fully ready on page load).
+
+- These components can perform server side tasks like reading files or fetching data directly from the database.
+- But they cannot use React hooks or handle user interactions.
+- Client components are the traditional React components.
+
+# Routing
