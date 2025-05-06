@@ -44,3 +44,9 @@ This architecture introduces a new approach to creating React components by divi
 - Client components are the traditional React components.
 
 # Routing
+
+Next.js has a file-system based routing system
+
+- All routes must inside the app folder
+- Route file must be either name page.tsx or page.js
+- Each folder represents the segment of the URL path
