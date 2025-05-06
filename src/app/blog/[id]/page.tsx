@@ -1,3 +1,8 @@
-export default function BlogPage({ params }: { params: { id: string } }) {
-  return <h1>You are viewing blog number: {params.id}</h1>;
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const id = (await params).id;
+  return <h1>You are viewing blog number: {id}</h1>;
 }
