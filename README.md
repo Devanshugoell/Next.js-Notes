@@ -50,3 +50,9 @@ Next.js has a file-system based routing system
 - All routes must inside the app folder
 - Route file must be either name page.tsx or page.js
 - Each folder represents the segment of the URL path
+
+# Dynamic Routing
+
+- Create a folder with square brackets for dynamic segments: [id]
+- Inside it, add a page.tsx or page.js file.
+- Access the dynamic param via params.id.
