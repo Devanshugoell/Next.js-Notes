@@ -1,1 +1,1 @@
-This the notes of Next.js
+# What is Next.js?
