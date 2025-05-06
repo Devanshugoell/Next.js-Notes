@@ -19,3 +19,12 @@ While React focuses mainly on building user interfaces (UI), Next.js extends Rea
 These features make Next.js a powerful framework for building modern, performant, and SEO-friendly web applications.
 
 ---
+
+# React Server Components
+
+This architecture was introduced by React team and quickly adopted by Next.js
+
+This architecture introduces a new approach to creating React components by dividing them into two types :
+
+- Server Components
+- Client Components
