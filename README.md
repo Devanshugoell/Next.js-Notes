@@ -56,3 +56,15 @@ Next.js has a file-system based routing system
 - Create a folder with square brackets for dynamic segments: [id]
 - Inside it, add a page.tsx or page.js file.
 - Access the dynamic param via params.id.
+- We need to use Async await for this
+
+```tsx
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const id = (await params).id;
+  return <h1>You are viewing blog number: {id}</h1>;
+}
+```
