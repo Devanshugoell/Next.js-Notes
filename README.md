@@ -198,6 +198,6 @@ export default function CurrentPath() {
 
 ## You can create separate folders for login and register, but route groups let you:
 
-✅ Share a layout (e.g. same navbar or background) only between those routes
-✅ Keep your folder structure organized without affecting the URL
-✅ Avoid polluting the global layout with layouts only needed for a specific group
+- ✅ Share a layout (e.g. same navbar or background) only between those routes
+- ✅ Keep your folder structure organized without affecting the URL
+- ✅ Avoid polluting the global layout with layouts only needed for a specific group
