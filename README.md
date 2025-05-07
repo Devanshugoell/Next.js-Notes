@@ -201,3 +201,33 @@ export default function CurrentPath() {
 - ✅ Share a layout (e.g. same navbar or background) only between those routes
 - ✅ Keep your folder structure organized without affecting the URL
 - ✅ Avoid polluting the global layout with layouts only needed for a specific group
+
+# Layouts in Next.js
+
+- Layouts are **React components** used to wrap pages with consistent UI (like headers, sidebars, footers).
+- Each folder inside `app/` can have its own `layout.tsx`.
+- Layouts persist between route changes unless a new layout is defined.
+
+## Key Points
+
+- Must export a `children` prop.
+- Automatically wraps all child routes inside that folder.
+- Layouts are rendered on the **server by default**.
+
+## Basic Example
+
+```tsx
+// app/dashboard/layout.tsx
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <Sidebar />
+      <main>{children}</main>
+    </div>
+  );
+}
+```
