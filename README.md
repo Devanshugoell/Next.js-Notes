@@ -68,3 +68,28 @@ export default async function BlogPage({
   return <h1>You are viewing blog number: {id}</h1>;
 }
 ```
+
+# Nested Dynamic Routing
+
+- You can nest dynamic routes by placing dynamic folders inside each other.
+- Each folder with square brackets (`[param]`) represents a dynamic URL segment.
+- Example: For route `/blog/123/comment/456`, use the folder structure:
+
+- Inside `page.tsx`, access dynamic params like this:
+
+```tsx
+export default function CommentPage({
+  params,
+}: {
+  params: { blogId: string; commentId: string };
+}) {
+  const { blogId, commentId } = params;
+
+  return (
+    <div>
+      <h1>Blog ID: {blogId}</h1>
+      <h2>Comment ID: {commentId}</h2>
+    </div>
+  );
+}
+```
