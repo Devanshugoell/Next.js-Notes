@@ -128,3 +128,43 @@ export default function Docs({ params }: { params: { slug?: string[] } }) {
   return <h1>Docs Home page</h1>;
 }
 ```
+
+# Not Found Page
+
+- Next.js provides a built-in way to handle 404 pages using a special `not-found.tsx` file.
+- Place this file:
+  - Globally in the `app/` directory, or
+  - Inside any specific route folder to handle 404s **only for that segment**.
+
+## Global Not Found Page
+
+Example:
+
+```tsx
+export default function NotFound() {
+  return (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>Sorry, the page you are looking for doesn't exist.</p>
+    </div>
+  );
+}
+```
+
+# usePathname Hook
+
+- The `usePathname()` hook from `next/navigation` is used to get the **current URL path** in a client component.
+- It only works in **Client Components**, so you must add `"use client"` at the top.
+
+## How to Use
+
+```tsx
+"use client";
+import { usePathname } from "next/navigation";
+
+export default function CurrentPath() {
+  const pathname = usePathname();
+
+  return <p>Current path: {pathname}</p>;
+}
+```
