@@ -93,3 +93,38 @@ export default function CommentPage({
   );
 }
 ```
+
+# Catch-all Segments
+
+- Catch-all segments let you match **multiple or optional path segments**.
+- Syntax:
+  - `[...slug]` → matches one or more segments (required)
+  - `[[...slug]]` → matches zero or more segments (optional)
+
+## Example 1: Required Catch-all
+
+Folder structure:
+app/
+└── docs/
+└── [...slug]/
+└── page.tsx
+
+Access path: `/docs/a/b/c`
+
+## Catch-all Segment Example with Conditional Rendering
+
+```tsx
+export default function Docs({ params }: { params: { slug?: string[] } }) {
+  if (params?.slug?.length === 2) {
+    return (
+      <h1>
+        Viewing docs of feature {params.slug[0]} and concept {params.slug[1]}
+      </h1>
+    );
+  } else if (params?.slug?.length === 1) {
+    return <h1>Viewing docs of feature {params.slug[0]}</h1>;
+  }
+
+  return <h1>Docs Home page</h1>;
+}
+```
