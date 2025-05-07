@@ -184,3 +184,20 @@ export default function CurrentPath() {
 - UI components (used across routes)
 - Server-side logic
 - Hooks
+
+# Route groups
+
+- Lets us logically organize our routes and project files without impacting the URL structure
+
+- Useful for separating concerns like layouts, authentication, or grouping routes for clarity.
+
+## Syntax
+
+- Create a folder wrapped in parentheses: `(group-name)`
+- This folder **won't appear in the final URL path**.
+
+## You can create separate folders for login and register, but route groups let you:
+
+✅ Share a layout (e.g. same navbar or background) only between those routes
+✅ Keep your folder structure organized without affecting the URL
+✅ Avoid polluting the global layout with layouts only needed for a specific group
