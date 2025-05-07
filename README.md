@@ -168,3 +168,19 @@ export default function CurrentPath() {
   return <p>Current path: {pathname}</p>;
 }
 ```
+
+# private Folder in Next.js
+
+- A way to tell Next.js to not to include it in routing.
+
+## Purpose
+
+- Used to **store reusable logic or components** that shouldn't be accessed as routes.
+- Helps separate non-route files from route segments inside the `app/` directory.
+
+## Common Use Cases
+
+- Utility functions
+- UI components (used across routes)
+- Server-side logic
+- Hooks
