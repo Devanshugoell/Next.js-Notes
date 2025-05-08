@@ -231,3 +231,13 @@ export default function DashboardLayout({
   );
 }
 ```
+
+# Nested Layouts in Next.js
+
+- **Nested layouts** allow different parts of your app to have **unique layouts**, while still inheriting from parent layouts.
+- Each folder can have its own `layout.tsx`, and they are **composed from the outermost to the innermost**.
+
+## How It Works
+
+- Layouts are rendered in a **nested hierarchy**.
+- The parent layout wraps the child layout, which wraps the actual page.
